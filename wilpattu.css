@@ -1,0 +1,372 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4 {
+    cursor: default;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    margin: 40px;
+}
+
+.logo {
+    position: absolute;
+    width: 4%;
+}
+
+
+
+
+/* Navbar Stylings */
+nav {
+    padding: 10px;
+    background-color: #33333378;
+}
+
+nav ul {
+    background-color: #33333378;
+    border-radius: 10px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 5px 120px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+/* Submenu Styles */
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    z-index: 1;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+nav ul li .submenu a {
+    display: block;
+    padding: 8px 15px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav ul li .submenu a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Footer */
+
+/* General Styling */
+.site-footer {
+    background-color: black;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    text-align: center;
+    /* Center-aligning text */
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5;
+}
+
+.site-footer hr.small {
+    margin: 20px 0;
+}
+
+.site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.site-footer a {
+    color: #737373;
+}
+
+.site-footer a:hover {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    /* Center-aligning text */
+}
+
+.footer-links li {
+    display: inline-block;
+    /* Display links in a line */
+    margin: 0 10px;
+    /* Adjust the space between links */
+}
+
+.footer-links a {
+    color: #737373;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.site-footer .row-socials {
+    text-align: center;
+    /* Center-align social icons */
+}
+
+.site-footer .row-socials a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 6px;
+    /* Adjust spacing between icons */
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+
+.copyright-text {
+    margin: 0;
+}
+
+/* Adjusting Social Media Icons */
+.site-footer .row-socials i {
+    margin: 0 10px;
+    /* Adjusted margin for better spacing */
+    font-size: 55px;
+    /* Set the font size to make the icons bigger */
+}
+
+
+
+/*images and about wilpattu*/
+.wilpattutopic {
+    text-align: justify;
+    padding: 20px;
+}
+
+.wilpattutopic h1 {
+    font-size: 100px;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+
+}
+
+.wilpattutopic h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+
+}
+
+
+
+.wilpattu-pic {
+    background-image: url(images/wilpattubackground2.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.wilpattuimg {
+    background-color: black;
+    height: 100vh;
+    color: #fff;
+    margin-top: -43px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+
+.wilpattuimg h1 {
+    padding: 30px;
+    font-size: 50px;
+}
+
+
+.wilpattu-para {
+    background-color: rgba(55, 53, 53, 0.889);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wilpattuimg img {
+    height: 400px;
+    width: 400px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+
+}
+
+
+/* Media query for screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+    .wilpattuimg {
+        padding-bottom: 30%;
+        padding-top: 30%;
+    }
+
+    .wilpattuimg h1 {
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .wilpattu-para {
+        padding: 10px;
+    }
+
+    .wilpattuimg img {
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+/*wilpattuwa animals*/
+
+  .wilpattu_gallery {
+      background-color: black;
+      text-align: center;
+  }
+
+  .wilpattu_gallery h1 {
+      margin-top: 0;
+      padding-top: 20px;
+      color: #fff;
+      font-size: 40px;
+  }
+
+  .wilpattu_collection {
+      background-color: black;
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "galimg1 galimg2  galimg3"
+          "galimg4 galimg5 galimg6";
+      grid-gap: 10px;
+      width: 90%;
+      margin: auto;
+  }
+
+  .wilpattu_collection img {
+      /*margin-right: 20px;*/
+      /*margin-left: 150px;*/
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: transform 1s;
+  }
+
+  .wilpattu_collection img:hover {
+
+      transform: scale(1.1);
+  }
+
+  #gal-img1 {
+      grid-area: galimg1;
+  }
+
+  #gal-img1 {
+      grid-area: galimg2;
+  }
+
+  #gal-img2 {
+      grid-area: galimg3;
+  }
+
+  #gal-img3 {
+      grid-area: galimg4;
+  }
+
+  #gal-img4 {
+      grid-area: galimg5;
+  }
+
+  #gal-img5 {
+      grid-area: galimg6;
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+      .wilpattu_collection {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-areas:
+              "galimg1 galimg2"
+              "galimg3 galimg4"
+              "galimg5 galimg6";
+      }
+
+      /* Adjust the image size for smaller screens */
+      .wilpattu_collection img {
+          width: 100%;
+          height: auto;
+          padding-bottom: 10%;
+          padding-top: 10%;
+      }
+  }
+
+  /* Media query for screens with a maximum width of 768px */
+  @media only screen and (max-width: 768px) {
+      .wilpattutopic h1 {
+          font-size: 60px;
+          /* Adjust font size for smaller screens */
+      }
+
+      /* ... (add any additional adjustments for smaller screens) ... */
+  }
