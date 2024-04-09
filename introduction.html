@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="newsletterstyle.css">
     <title>Wildlife In Sri Lanka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.4.0/css/zocial.min.css"
         integrity="sha512-D+88+j7wBsrfUyRLxvAi/ZYJ+2xffS/A9skvhx8Q8cxXv5rVrNX5BYm+GblI1POb23bjAygg2nXytDHtoGc9lQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="./images/logo.ico">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body>
+<body x-data="main">
     <header class="introduction-pic">
         <nav class="nav-1s">
             <img src="images/logo.ico" class="logo">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Sri Lankan Wildlife Introduction</a></li>
+                <li><a href="introduction.html">Introduction to Sri Lankan Wildlife</a></li>
                 <li><a href="department.html">Department of Wildlife Conservation</a></li>
                 <li><a href="leopard.html">Sri Lankan Leopard</a></li>
                 <li>
@@ -28,48 +30,32 @@
                         <a href="wilpattu.html">Wilpattu National Park</a>
                     </section>
                 </li>
-                <li>
-                    <a href="animalsrilanka.html">Animals</a>
-                </li>
+                <li><a href="animalsrilanka.html">Animals</a></li>
+                <li><a href="register.html">Login</a></li>
             </ul>
-        </nav>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        </nav> 
         <section class="blur-content">
            <section class="backblur">
-              <h1>WILDLIFE PARKS IN SRI LANKA</h1>
-              <p>Sri Lanka has a history of nature conservation and it’s believed that Sri Lanka’s first national park was established
-            between 377 BC and 1017AD, most likely around the 3rd century AD. Most of Sri Lanka’s current national parks date back
-            to colonial times or even earlier in Sri Lanka’s history. Sri Lanka’s national parks are governed by the 1937 Fauna and
-            Flora Protection Ordinance and can also only be created, abolished or changed by ministerial order from the
-            government. The first two official national parks in Sri Lanka are Yala and Wilpattu National Parks. Both were
-            established on February the 25th 1938. All 26 of the Sri Lankan national parks cover a variety of different geography
-            and habitats, from mountainous montane forest to Sri Lanka dry-zone dry evergreen forests, grasslands, and wetland
-            lagoons. Sri Lanka has a vast array of untouched natural habitats for you to enjoy. The biological diversity that this
-            small island encompasses is huge. Sri Lanka has an incredible amount of endemism of both flora and fauna. Specifically,
-            16% of fauna and 23% of flora are endemic to the country, making Sri Lanka even more unique than you could possibly
-            imagine.</p>
+              <h1 id="introdtopic1" x-text="introdtopic1" contenteditable="true"></h1>
+              <p id="introdpara1" x-text="introdpara1" contenteditable="true"></p>
             </section>
         </section>
     </header>
 
 
-<main>
+    <main>
         <section class="parks">
-            <h1>Hikkaduwa Marine National Park</h1>
-
+            <h1 id="introdtopic2" x-text="introdtopic2" contenteditable="true"></h1>
             <section class="aboutpark">
-                <p id="p2"> Hikkaduwa National Park is one of the three marine national parks in Sri Lanka. The national park contains a fringing
-                coral reef of high degree of biodiversity. The area was declared a wildlife sanctuary on May 18, 1979, and then on
-                August 14, 1988, upgraded to a nature reserve with extended land area.The growth of the number of visitors in the
-                next 25 years increased the degradation of the coral reef. To reduce the effects to the ecosystem, the reef was declared
-                a national park on September 19, 2002.</p>
+                <p id="introdpara2" x-text="introdpara2" contenteditable="true"></p>
             </section>
             <section class="map-container">
-                 <iframe
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.950118394879!2d80.09663587498966!3d6.137404293849485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1770f548d710b%3A0x159baa380959fcaa!2sHikkaduwa%20Marine%20National%20Park!5e0!3m2!1sen!2slk!4v1704430076884!5m2!1sen!2slk"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                
             </section>
             <section class="gallery2">
                 <section class="collection2">
@@ -80,26 +66,19 @@
                 </section>
             </section>
         </section>
-
+    
         <section class="parks">
-            <h1>Udawalawe National Park</h1>
-            <section class="aboutpark"></section>
-            <p id="p2"> The Udawalawe National Park is the third most visited Park in Sri Lanka. The varied habitats in Udawalawe make it home
-            to a diverse spectrum of animals. The main attraction at Udawalawe however are the elephants, with a herd of 600 to 700
-            elephants believed to be residents of the Park. The Udawalawe National Park is home to many more species of Sri Lankan
-            wildlife which include the endemic Toque Macaque and the Sri Lankan Leopard,though the latter is seen very rarely. The
-            Sri Lankan Sloth Bear has been recorded as well, but it is seldom seen. There are numerous species of birds, some of
-            which are endemic along with fish, reptiles and amphibians.</p>
-       
-
-             <section class="map-container">
-               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970341.14976031!2d80.64093269659699!3d6.577285671115294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae408ff88887e79%3A0xaf12e79ffbd980d7!2sUdawalawe%20National%20Park!5e0!3m2!1sen!2slk!4v1704642902941!5m2!1sen!2slk"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-               </iframe>
-        
-             </section>
+            <h1 id="introdtopic3" x-text="introdtopic3" contenteditable="true"></h1>
+            <section class="aboutpark">
+                <p id="introdpara3" x-text="introdpara3" contenteditable="true"></p>
+            </section>
+            <section class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970341.14976031!2d80.64093269659699!3d6.577285671115294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae408ff88887e79%3A0xaf12e79ffbd980d7!2sUdawalawe%20National%20Park!5e0!3m2!1sen!2slk!4v1704642902941!5m2!1sen!2slk"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
             <section class="gallery2">
                 <section class="collection2">
                     <img src="images/udawalawe1.jpeg" alt="" id="gal-img1">
@@ -108,77 +87,73 @@
                     <img src="images/udawalawe4.webp" alt="" id="gal-img4">
                 </section>
             </section>
-
         </section>
-
-                <section class="parks">
-                    <h1>Hortain Plains National Park</h1>
-                    <section class="aboutpark"></section>
-                    <p id="p2">One of the most beautiful World Heritage Sites in the world is definitely the Horton Plains National Park in Sri Lanka.
-                    The park is spread over the two highest mountains in the area called Kirigalpotta and Totapola. The plateau-like
-                    structure along with plains on one end, thick forests and mountains on other make the Central Highlands of Sri Lanka.
-                    You will find a number of waterfalls, lakes, rocky hills and views of the ocean in this part of the country. The forest
-                    is home to a number of wild animals and birds, however, most large animals remain elusive and unapproachable.</p>
-                
-                
-                    <section class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5746.391334530313!2d80.7986418858351!3d6.809184437137308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3882edb4b78ef%3A0xcebca89153777249!2sHorton%20Plains%20National%20Park!5e0!3m2!1sen!2slk!4v1704643908146!5m2!1sen!2slk"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </section>
-
-
-                    <section class="gallery2">
-                        <section class="collection2">
-                            <img src="images/hortain.jpeg" alt="" id="gal-img1">
-                            <img src="images/hortain1.jpeg" alt="" id="gal-img2">
-                            <img src="images/hortain2.jpeg" alt="" id="gal-img3">
-                        </section>
-                    </section>
-                </section>
-
-                
-
-    </main>
-        <footer class="site-footer">
-          <section class="container">
-             <section class="row">
-                 <section class="col-sm-12 col-md-6">
-                     <h6>About</h6>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed
-                        nisl varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                        ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit. Fusce eget arcu sed nisl
-                        varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                        ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit.</p>
-                 </section>
-                <section>
-                    <button class="btn" learn more>
-                    </section>
-                <section class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
-                    <ul class="footer-links">
-                        <li><a href="department.html">About Us</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="leopard.html">Leopard</a></li>
-                        <li><a href="index3.html">Home</a></li>
-                        <li><a href="animalsrilanka.html">Animals</a></li>
-                        <li><a href="yalanationalpark.html">Yaala</a></li>
-                        <li><a href="wilpattu.html">Wilpattu</a></li>
-                    </ul>
-                </section>
-             </section>
-            <hr>
-          </section>
-        <section class="container">
-            <div class="row">
-                <section class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Wildlife Conservation
-                        Department.</p>
+    
+        <section class="parks">
+            <h1 id="introtopic4" x-text="introtopic4" contenteditable="true"></h1>
+            <section class="aboutpark">
+                <p id="introdpara4" x-text="introdpara4" contenteditable="true"></p>
+            </section>
+            <section class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5746.391334530313!2d80.7986418858351!3d6.809184437137308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3882edb4b78ef%3A0xcebca89153777249!2sHorton%20Plains%20National%20Park!5e0!3m2!1sen!2slk!4v1704643908146!5m2!1sen!2slk"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+            <section class="gallery2">
+                <section class="collection2">
+                    <img src="images/hortain.jpeg" alt="" id="gal-img1">
+                    <img src="images/hortain1.jpeg" alt="" id="gal-img2">
+                    <img src="images/hortain2.jpeg" alt="" id="gal-img3">
                 </section>
             </section>
         </section>
-     </footer>
+    </main>
+    
+        <footer class="site-footer">
+            <section class="container">
+                <section class="row">
+                    <section class="col-sm-12 col-md-6">
+                        <h6 id="footertop" x-text="footertop" contenteditable="true"></h6>
+                        <p class="text-justify" id="footerpara" x-text="footerpara" contenteditable="true"></p>
+                    </section>
+                    <section>
+                        <button class="btn" learn more>
+                    </section>
+                    <section class="col-xs-6 col-md-3">
+                        <h6 id="footlink" x-text="footlink"></h6>
+                        <ul class="footer-links">
+                            <li><a href="department.html">About Us</a></li>
+                            <li><a href="loginpage.html">Login</a></li>
+                            <li><a href="leopard.html">Leopard</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="animalsrilanka.html">Animals</a></li>
+                            <li><a href="yalanationalpark.html">Yaala</a></li>
+                            <li><a href="wilpattu.html">Wilpattu</a></li>
+                        </ul>
+                    </section>
+                </section>
+        
+            </section>
+            <section class="container">
+                <section class="row">
+                    <section class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Wildlife Conservation
+                            Department.</p>
+                    </section>
+                </section>
+            </section>
+            <section class="newsletter">
+                <h2>Subscribe to Our Newsletter</h2>
+                <form id="newsletterForm" action="#" method="post">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" id="subscribeBtn">Subscribe</button>
+                </form>
+                <p id="feedback" style="display: none;"></p>
+            </section>
+        </footer>
+    <script src="intro.js"></script>
+    <script src="newsletter.js"></script>
  </body>
 </html>

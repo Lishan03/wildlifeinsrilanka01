@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="logstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body x-data="{ 
+    topic: 'Login',
+    email: '',
+    password: '',
+    rememberMe: false,
+    error: ''
+  }">
+    <section class="wrapper">
+        <form @submit.prevent="validateForm">
+            <h1 id="topic" x-text="topic"></h1>
+            <section class="input-box">
+                <input type="email" x-model="email" id="email" placeholder="Email" required>
+                <i class='bx bxs-user'></i>
+            </section>
+            <section class="input-box">
+                <input type="password" x-model="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </section>
+            <section class="remember-forgot">
+                <label>
+                    <input type="checkbox" x-model="rememberMe"> Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+            </section>
+            <button type="submit" class="bttn">Login</button>
+
+            <section class="register-link">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </section>
+
+            <p x-text="error" class="error-message"></p>
+        </form>
+    </section>
+
+    <script>
+        function validateForm() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+    
+            if (email === "admin@gmail.com" && password === "admin123") {
+                alert("Admin Login Successful");
+
+                window.location.href = "admin.html";
+                return;
+            }
+    
+            let userRecords = JSON.parse(localStorage.getItem("users")) || [];
+            let userFound = userRecords.some(user => user.email === email && user.password === password);
+    
+
+            if (userFound) {
+                alert("Login Successful");
+                let currentUser = userRecords.find(user => user.email === email);
+                localStorage.setItem("name", currentUser.name);
+                localStorage.setItem("email", currentUser.email);
+                window.location.href = "index.html";
+            } else {
+                alert("Login Failed");
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

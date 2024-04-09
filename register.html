@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="logstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body x-data="{ 
+    topic: 'Register',
+    email: '',
+    password: '',
+    error: ''
+}">
+    <section class="wrapper">
+        <form id="registrationForm">
+            <h1 id="topic" x-text="topic">Register</h1>
+            <section class="input-box">
+                <input type="text" placeholder="Username" id="username" required>
+                <i class='bx bxs-user'></i>
+            </section>
+            <section class="input-box">
+                <input type="email" placeholder="Email" id="email" required>
+                <i class='bx bx-mail-send'></i>
+            </section>
+            <section class="input-box">
+                <input type="password" placeholder="Password" id="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </section>
+            <button type="submit" class="bttn">Register</button>
+        </form>
+        <section class="register-link">
+            <p>Already have an account? <a href="loginpage.html">Login</a></p>
+        </section>
+    </section>
+
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let name = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            // Check if email already exists in local storage
+            let user_records = JSON.parse(localStorage.getItem("users")) || [];
+            if (user_records.some(v => v.email === email)) {
+                alert("Duplicate Data");
+                window.location.href = 'loginpage.html';
+            } else {
+                // Add new user data to local storage
+                user_records.push({
+                    "name": name,
+                    "email": email,
+                    "password": password,
+                });
+                localStorage.setItem("users", JSON.stringify(user_records));
+                alert("Registration Successful");
+                
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="newsletterstyle.css">
     <title>Wildlife In Sri Lanka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.4.0/css/zocial.min.css"
         integrity="sha512-D+88+j7wBsrfUyRLxvAi/ZYJ+2xffS/A9skvhx8Q8cxXv5rVrNX5BYm+GblI1POb23bjAygg2nXytDHtoGc9lQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="./images/logo.ico">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body>
-    <!-- NavBar -->
-
+<body x-data="main">
     <header class="department-pic">
         <nav class="nav-1s">
             <img src="images/logo.ico" class="logo">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Sri Lankan Wildlife Introduction</a></li>
+                <li><a href="introduction.html">Introduction to Sri Lankan Wildlife</a></li>
                 <li><a href="department.html">Department of Wildlife Conservation</a></li>
                 <li><a href="leopard.html">Sri Lankan Leopard</a></li>
                 <li>
@@ -30,23 +30,16 @@
                         <a href="wilpattu.html">Wilpattu National Park</a>
                     </section>
                 </li>
-                <li>
-                    <a href="animalsrilanka.html">Animals</a>
-                </li>
+                <li><a href="animalsrilanka.html">Animals</a></li>
+                <li><a href="register.html">Login</a></li>
             </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
                 <section>
                     <section class="blur-content">
                         <section class="backblur">
-                        <h1>ABOUT US</h1>
-                        <p>Sri Lanka boasts a remarkable array of wildlife within its diverse landscapes, earning it a reputation as a biodiversity
-                        hotspot. Its lush rainforests, serene wetlands, and vast national parks provide habitats for a wide spectrum of species.
-                        The island is renowned for its population of Asian elephants, leopards, and sloth bears, thriving in protected areas
-                        like Yala and Wilpattu National Parks. Sri Lanka also teems with vibrant birdlife; the Sinharaja Forest Reserve, a
-                        UNESCO World Heritage Site, hosts an impressive variety of endemic bird species. Coastal regions offer a glimpse of
-                        marine life, including whales, dolphins, and sea turtles. However, despite these riches, challenges such as habitat
-                        fragmentation and human-wildlife conflict pose threats to several species, underlining the importance of conservation
-                        efforts to safeguard this unique wildlife heritage.</p>
+                        <h1 id="deptopic1" x-text="deptopic1" contenteditable="true"></h1>
+                        <p id="deppara1" x-text="deppara1" contenteditable="true"></p>
                         </section>
                     </section>
                 </section>
@@ -64,7 +57,7 @@
     </section>
 
     <section class="gallery">
-        <h1>SRI LANKAN VARIOUS SPOTTING</h1>
+        <h1 id="deptopic2" x-text="deptopic2" contenteditable="true"></h1>
         <section class="collection">
             <img src="images/departmentpage.spotting.jpeg" alt="" id="gal-img1">
             <img src="images/departmentpage.spotting2.jpeg" alt="" id="gal-img2">
@@ -79,56 +72,51 @@
 
 </main>
 
-<!--- Footer --->
+
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6>About</h6>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed
-                        nisl varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                        ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit. Fusce eget arcu sed nisl
-                        varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                        ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit.</p>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
+        <section class="container">
+            <section class="row">
+                <section class="col-sm-12 col-md-6">
+                    <h6 id="footertop" x-text="footertop" contenteditable="true"></h6>
+                    <p class="text-justify" id="footerpara" x-text="footerpara" contenteditable="true"></p>
+                </section>
+                <section>
+                    <button class="btn" learn more>
+                </section>
+                <section class="col-xs-6 col-md-3">
+                    <h6 id="footlink" x-text="footlink"></h6>
                     <ul class="footer-links">
-                    <li><a href="department.html">About Us</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="leopard.html">Leopard</a></li>
-                    <li><a href="index3.html">Home</a></li>
-                    <li><a href="animalsrilanka.html">Animals</a></li>
-                    <li><a href="yalanationalpark.html">Yaala</a></li>
-                    <li><a href="wilpattu.html">Wilpattu</a></li>
+                        <li><a href="department.html">About Us</a></li>
+                        <li><a href="loginpage.html">Login</a></li>
+                        <li><a href="leopard.html">Leopard</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="animalsrilanka.html">Animals</a></li>
+                        <li><a href="yalanationalpark.html">Yaala</a></li>
+                        <li><a href="wilpattu.html">Wilpattu</a></li>
                     </ul>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-                    <p>Wildlife Conservation Department.</p>
-                </div>
-                <div class="row-socials">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+                </section>
+            </section>
+    
+        </section>
+        <section class="container">
+            <section class="row">
+                <section class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Wildlife Conservation
+                        Department.</p>
+                </section>
+            </section>
+        </section>
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm" action="#" method="post">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" id="subscribeBtn">Subscribe</button>
+            </form>
+            <p id="feedback" style="display: none;"></p>
+        </section>
     </footer>
+    <script src="dep.js"></script>
+    <script src="newsletter.js"></script>
 </body>
 
 </html>

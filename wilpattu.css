@@ -1,5 +1,4 @@
-body,
-html {
+body,html {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -16,15 +15,14 @@ p {
     margin: 40px;
 }
 
+
+/* Navbar Styles */
 .logo {
     position: absolute;
     width: 4%;
+    margin-left: 95%;
 }
 
-
-
-
-/* Navbar Stylings */
 nav {
     padding: 10px;
     background-color: #33333378;
@@ -56,8 +54,6 @@ nav ul li a:hover {
     color: #333;
 }
 
-
-
 /* Submenu Styles */
 nav ul li .submenu {
     display: none;
@@ -81,14 +77,81 @@ nav ul li .submenu a {
 }
 
 nav ul li .submenu a:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
 }
 
 
+
+
+@media only screen and (max-width: 768px) {
+    .nav-1s .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #333;
+        z-index: 1;
+        }
+            
+        .nav-1s .nav-links.show {
+        display: flex;
+        }
+            
+        .nav-1s .nav-links li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #555;
+        }
+            
+        .nav-1s .nav-links li a {
+        color: rgb(195, 189, 189);
+        text-decoration: none;
+        }
+
+        .logo{
+            margin-left: 90%;
+            width: 4%
+        }
+        }
+
+
+        .menu-toggle {
+            display: none; 
+            
+        }
+        
+     
+ @media only screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block; 
+     }
+        
+    .nav-links {
+     display: none; 
+     }
+        
+    .nav-links.active {
+     display: flex; 
+     flex-direction: column;
+     background-color: #010101;
+     position: absolute;
+     top: 60px; 
+     left: 0;
+     width: 100%;
+     z-index: 1;
+    }
+        
+    .nav-links li {
+     padding: 10px;
+     text-align: center;
+     border-bottom: 1px solid #000000;
+     }
+     }
+            
+       
 /* Footer */
 
-/* General Styling */
 .site-footer {
     background-color: black;
     padding: 45px 0 20px;
@@ -143,39 +206,12 @@ nav ul li .submenu a:hover {
     color: #737373;
 }
 
-.footer-links a:active,
-.footer-links a:focus,
-.footer-links a:hover {
-    color: #3366cc;
-    text-decoration: none;
-}
 
-.site-footer .row-socials {
-    text-align: center;
-    /* Center-align social icons */
-}
-
-.site-footer .row-socials a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 6px;
-    /* Adjust spacing between icons */
-    border-radius: 100%;
-    background-color: #ffffff;
-}
 
 .copyright-text {
     margin: 0;
 }
 
-/* Adjusting Social Media Icons */
-.site-footer .row-socials i {
-    margin: 0 10px;
-    /* Adjusted margin for better spacing */
-    font-size: 55px;
-    /* Set the font size to make the icons bigger */
-}
 
 
 
@@ -289,6 +325,7 @@ nav ul li .submenu a:hover {
       font-size: 40px;
   }
 
+  /*gallery*/
   .wilpattu_collection {
       background-color: black;
       align-items: center;

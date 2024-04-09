@@ -1,22 +1,26 @@
-body, html {
+
+body,html {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    }
-    
-    h1,h2,h3,h4{
+}
+
+/* Header Styles */
+h1,h2,h3,h4 {
     cursor: default;
     text-align: center;
-    }
+}
 
-    p{
-        font-size: 20px;
-        margin: 40px;
-    }
-    
-    
-    .bodycontent{
+/* Paragraph Styles */
+p {
+    font-size: 20px;
+    margin: 40px;
+}
+
+
+/* Body Content Container */
+.bodycontent {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -24,89 +28,92 @@ body, html {
     background-color: #ffffff00;
     color: white;
     align-items: center;
-    }
-    
-    .topic{
+}
+
+/* Topic Styles */
+.topic {
     padding-top: 6%;
     margin-bottom: 0;
     font-size: 90px;
     color: rgba(255, 255, 255, 0.6);
-    }
-    
-    .subtopic{
+}
+
+/* Subtopic Styles */
+.subtopic {
     font-size: 25px;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 0;
     margin: 0 200px;
-    
-    }
-    
-    .image{
-    
+}
+
+/* Image Container Styles */
+.image {
     background-image: url(images/2lions.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .subtopic {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 20px;
     }
+}
 
-        /* Media query for screen size 768px */
-        @media only screen and (max-width: 768px) {
-            .subtopic {
-                padding-left: 20px;
-                padding-right: 20px;
-                margin: 0 20px;
-            }
-        }
-    
-        /* Media query for screen size 1024px */
-        @media only screen and (min-width: 769px) and (max-width: 1024px) {
-            .subtopic {
-                padding-left: 50px;
-                padding-right: 50px;
-                margin: 0 50px;
-            }
-        }
-    
 
-    /* Navbar Stylings */
-    .logo{
-        position:absolute;
-        width: 4%;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .subtopic {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 0 50px;
     }
+}
 
-    nav{
+/* Navbar Styles */
+.logo {
+    position: absolute;
+    width: 4%;
+    margin-left: 95%;
+}
+
+nav {
     padding: 10px;
     background-color: #33333378;
-    }
-    
-    nav ul {
+}
+
+nav ul {
     background-color: #33333378;
     border-radius: 10px;
     padding: 10px 0;
     text-align: center;
     margin: 5px 120px;
-    }
-    nav ul li {
+}
+
+nav ul li {
     display: inline-block;
     margin-right: 20px;
-    }
-    nav ul li a {
+}
+
+nav ul li a {
     text-decoration: none;
     color: #fff;
     padding: 8px 15px;
     transition: all 0.3s ease;
     border-radius: 5px;
-    }
+}
 
-    nav ul li a:hover {
+nav ul li a:hover {
     background-color: #fff;
     color: #333;
-    }
+}
 
-
-    /* Submenu Styles */
-    nav ul li .submenu {
+/* Submenu Styles */
+nav ul li .submenu {
     display: none;
     position: absolute;
     background-color: #333;
@@ -114,98 +121,105 @@ body, html {
     z-index: 1;
     border-radius: 6px;
     margin-top: 8px;
-    }
-    nav ul li:hover .submenu {
+}
+
+nav ul li:hover .submenu {
     display: block;
-    }
-    nav ul li .submenu a {
+}
+
+nav ul li .submenu a {
     display: block;
     padding: 8px 15px;
     color: #fff;
     transition: all 0.3s ease;
-    }
-    nav ul li .submenu a:hover {
+}
+
+nav ul li .submenu a:hover {
     background-color: #fff;
     color: #333;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-1s .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #333;
+        z-index: 1;
+        }
+            
+        .nav-1s .nav-links.show {
+        display: flex;
+        }
+            
+        .nav-1s .nav-links li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #555;
+        }
+            
+        .nav-1s .nav-links li a {
+        color: rgb(195, 189, 189);
+        text-decoration: none;
+        }
+
+        .logo{
+            margin-left: 90%;
+            width: 4%
+        }
+        }
+
+
+        .menu-toggle {
+            display: none; 
+            
+        }
+        
+     
+ @media only screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block; 
+     }
+        
+    .nav-links {
+     display: none; 
+     }
+        
+    .nav-links.active {
+     display: flex; 
+     flex-direction: column;
+     background-color: #010101;
+     position: absolute;
+     top: 60px; 
+     left: 0;
+     width: 100%;
+     z-index: 1;
     }
-        /* Hamburger icon styles */
-        .menubt {
-            display: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-    
-        .menubt img {
-            width: 30px;
-            /* Adjust the size as needed */
-        }
-
-
-
-
-    
-
-        /* Media query for screen size 768px */
-        @media only screen and (max-width: 768px) {
-            /* Responsive styles for the navigation */
-                    .nav-1s .nav-links {
-                        display: none;
-                        flex-direction: column;
-                        position: absolute;
-                        width: 100%;
-                        background-color: #333;
-                        z-index: 1;
-                    }
+        
+    .nav-links li {
+     padding: 10px;
+     text-align: center;
+     border-bottom: 1px solid #000000;
+     }
+     }
             
-                    .nav-1s .nav-links.show {
-                        display: flex;
-                    }
-            
-                    .nav-1s .nav-links li {
-                        text-align: center;
-                        padding: 10px;
-                        border-bottom: 1px solid #555;
-                    }
-            
-                    .nav-1s .nav-links li a {
-                        color: white;
-                        text-decoration: none;
-                    }
-            
-                    .menubt {
-                        display: block;
-                        cursor: pointer;
-                    }
-                }
-            
-    
-        /* Media query for screen size 1024px 
-        @media only screen and (min-width: 769px) and (max-width: 1024px) {
-            nav ul {
-                margin: 5px 50px;
-            }
-    
-            nav ul li {
-                margin-right: 10px;
-            }
-    
-            nav ul li .submenu {
-                margin-top: 10px;
-            }
-        }
-                */
+       
+        
+
 
 
     /* Footer */
-    
-    /* General Styling */
     .site-footer {
     background-color: black;
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;
     color: #737373;
-    text-align: center; /* Center-aligning text */
+    text-align: center; 
     }
     
     .site-footer hr {
@@ -237,60 +251,50 @@ body, html {
     .footer-links {
     padding-left: 0;
     list-style: none;
-    text-align: center; /* Center-aligning text */
+    text-align: center; 
     }
     
     .footer-links li {
-    display: inline-block; /* Display links in a line */
-    margin: 0 10px; /* Adjust the space between links */
+    display: inline-block; 
+    margin: 0 10px; 
     }
     
     .footer-links a {
     color: #737373;
     }
     
-    .footer-links a:active,
-    .footer-links a:focus,
-    .footer-links a:hover {
-    color: #3366cc;
-    text-decoration: none;
-    }
     
-    
+
     .copyright-text {
     margin: 0;
     }
     
-    
-        /* Media Query for screen size 768px */
-        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
             .site-footer {
                 padding: 30px 0 15px;
-                /* Adjust padding for smaller screens */
                 font-size: 14px;
-                /* Adjust font size for smaller screens */
             }
     
             .site-footer .row-socials,
             .row-social-images {
                 width: 20%;
-                /* Adjusted width for social icons for smaller screens */
+                
             }
         }
     
-        /* Media Query for screen size 1024px */
+       
         @media only screen and (min-width: 1024px) {
             .site-footer {
                 padding: 45px 0 20px;
-                /* Reset padding for larger screens */
+               
                 font-size: 15px;
-                /* Reset font size for larger screens */
+                
             }
     
             .site-footer .row-socials,
             .row-social-images {
                 width: 10%;
-                /* Reset width for social icons for larger screens */
+                
             }
         }
 
@@ -318,145 +322,132 @@ body, html {
     }
 
     .sub-intro{
-        background-color: black;
-        padding: 40px;
-        color: white;
-        text-align: center;
+      background-color: black;
+      padding: 40px;
+      color: white;
+      text-align: center;
 
+        }
+
+
+    /* main-page-images*/
+    .intro-content img{
+        margin-right: 20px;
+        margin-left: 150px;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 1s;
     }
 
-
-/* main-page-images*/
-.intro-content img{
-    margin-right: 20px;
-    margin-left: 150px;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 1s;
-}
-
-.intro-content img:hover{
-    
-    transform: scale(1.1);
-}
-.intro-cont2{
-    display: flex;
+    .intro-content img:hover{
+        
+        transform: scale(1.1);
+    }
+    .intro-cont2{
+        display: flex;
         flex-direction: row;
-    
-        /* Align items at the start (left) */
         margin-top: 20px auto;
-    
-        /* Adjust the minimum width as needed */
         padding: 0 20px;
-        /* Adjust padding as needed */
-}
-
-.intro-content2 img{
-    margin-top: 20px;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 1s;
-}
-
-.intro-content2 img:hover{
-    transform: scale(1.1);
-}
-
-
-.intro-content {
-    margin-right: 10px;
-    /* Add margin to create space between image and text */
-}
-
-
-#subtopic-title {
-    font-size: 45px;
-}
-.paragraph{
-    font-size: 150S;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-}
-
-.intro-container{
-   display: flex;
-   flex-direction: row;
-    
-    /* Align items at the start (left) */
-    margin-top: 20px auto;
-    
-    /* Adjust the minimum width as needed */
-    padding: 0 20px;
-    /* Adjust padding as needed */
-}
-
-.intro-content {
-    margin-right: 10px;
-    /* Add margin to create space between image and text */
-}
-
-/* Media Query for screen size 768px */
-@media only screen and (max-width: 768px) {
-    .hero-btn {
-        margin: 15px;
-        /* Adjust margin for smaller screens */
-        font-size: 12px;
-        /* Adjust font size for smaller screens */
+          
     }
 
-    .sub-intro {
-        padding: 20px;
-        /* Adjust padding for smaller screens */
+    .intro-content2 img{
+        margin-top: 20px;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 1s;
     }
 
-    .intro-content img,
-    .intro-content2 img {
-        width: 100%;
-        /* Make images fill the width of the container for smaller screens */
-        height: auto;
-        /* Maintain aspect ratio */
-        margin-left: 0;
-        /* Reset margin for smaller screens */
+    .intro-content2 img:hover{
+        transform: scale(1.1);
     }
+
+
+    .intro-content {
+        margin-right: 10px;
+     
+    }
+
 
     #subtopic-title {
-        font-size: 30px;
-        /* Adjust font size for smaller screens */
+        font-size: 45px;
+    }
+    .paragraph{
+        font-size: 150S;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
     }
 
-    .paragraph {
-        font-size: 14px;
-        /* Adjust font size for smaller screens */
-    }
-}
+    .intro-container{
+    display: flex;
+    flex-direction: row;
+        
+      
+     margin-top: 20px auto;
+     padding: 0 20px;
 
-/* Media Query for screen size 1024px */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .hero-btn {
-        margin: 20px;
-        /* Adjust margin for medium-sized screens */
     }
 
-    .intro-content,
-    .intro-cont2 {
-        flex-direction: column;
-        /* Stack content vertically for medium-sized screens */
+    .intro-content {
+        margin-right: 10px;
     }
-}
-
-/* Optional: Additional adjustments for larger screens if needed */
-@media only screen and (min-width: 1025px) {
-    /* Add your styles for screens larger than 1024px if needed */
-}
 
 
+    @media only screen and (max-width: 768px) {
+        .hero-btn {
+            margin: 15px;
+            font-size: 12px;
+  
+        }
+
+        .sub-intro {
+            padding: 20px;
+
+        }
+
+        .intro-content img,
+        .intro-content2 img {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+
+        }
+
+        #subtopic-title {
+            font-size: 30px;
+ 
+        }
+
+        .paragraph {
+            font-size: 14px;
+
+        }
+    }
 
 
-/*department.css*/
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .hero-btn {
+            margin: 20px;
+        }
+
+        .intro-content,
+        .intro-cont2 {
+            flex-direction: column;
+        }
+    }
+
+
+    @media only screen and (min-width: 1025px) {
+    }
+
+
+
+
+ /*department.css*/
    .department-pic {
        background-position: center;
        background-size: cover;
@@ -497,7 +488,7 @@ body, html {
         font-size: 40px;   
    }
 
-   .map-container{
+  .map-container{
     padding-top: 40px;
     padding-bottom: 100px;
     margin: 0 20vh;
@@ -505,11 +496,6 @@ body, html {
     width: 600px;
     height: 450px;
    }
-
-
-            
-
-
 
 
 
@@ -540,8 +526,6 @@ body, html {
     }
     
    .collection img{
-     /*margin-right: 20px;*/
-     /*margin-left: 150px;*/
      width: 400px;
      height: 400px;
      object-fit: cover;
@@ -573,38 +557,37 @@ body, html {
         grid-area: galimg6;
     }
 
-        /* Media Query for screen size 768px */
+
         @media only screen and (max-width: 768px) {
             header{
                 height: 200vh;
             }
             .department-pic {
                 height: 150vh;
-                /* Adjust height for smaller screens */
+
             }
     
             .blur-content {
                 font-size: 150%;
-                /* Adjust font size for smaller screens */
+
             }
     
             .backblur {
                 margin: 0 1vh;
-                /* Adjust margin for smaller screens */
+
             }
     
             .map-container {
                 margin: 1vh;
-                /* Adjust margin for smaller screens */
                 width: 100%;
-                /* Make the map container full width */
+
             }
     
             .collection img {
                 width: 100%;
-                /* Make images fill the width of the container for smaller screens */
+
                 height: 100%;
-                /* Maintain aspect ratio */
+
             }
         }
     
@@ -613,27 +596,21 @@ body, html {
         @media only screen and (min-width: 769px) and (max-width: 1024px) {
             .backblur {
                 margin: 0 15vh;
-                /* Adjust margin for medium-sized screens */
+
             }
     
             .map-container,
             .collection {
                 margin: 0 15vh;
-                /* Adjust margin for medium-sized screens */
+
             }
     
             .collection img {
                 width: 100%;
-                /* Make images fill the width of the container for medium-sized screens */
                 height: auto;
-                /* Maintain aspect ratio */
+
             }
         }
-    
-        /* Optional: Additional adjustments for larger screens if needed */
-        @media only screen and (min-width: 1025px) {
-            /* Add your styles for screens larger than 1024px if needed */
-        }
 
 
 
@@ -642,228 +619,208 @@ body, html {
 
 
 
+ /*introduction-page*/
 
-    /*introduction-page*/
+.introduction-pic {
+    background: url(./images/introbackground3.jpeg) center/cover no-repeat;
+    height: 100vh;
+}
 
-    .introduction-pic{
-         background-position: center;
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-image: url(./images/introbackground3.jpeg);
-         height: 100vh;
-    
-    }
-    #sub{
-        font-size: 300%;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
-        color: #fff;
-        margin-top: 8%;
-    }
-    
-    #p{
-        font-size: 150%;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
-        color: #fff;
-        margin-top: 8%;
-    }
- 
-        .parks{
-            text-align: center;
-            background-color: black;
-            font-size: 200%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-    
-        .parks {
-            margin-top: 0;
-            padding-top: 20px;
-            color: #fff;
-        }
-    .aboutpark{
-        font-size: 150%;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: center;
-        color: #fff;
-        margin-top: 1%;
-    }
+#sub,
+#p {
+    font-size: 24px; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #fff;
+    margin-top: 8%;
+}
 
-    .gallery2{
-        background-color: black;
-            text-align: center;
-    }
+.parks {
+    text-align: center;
+    background-color: black;
+    font-size: 32px; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 20px;
+}
 
-   
-    .collection2 img{
-        width: 400px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-        transition: transform 1s;
-        padding: 14px;
-        
-        
+.aboutpark {
+    font-size: 24px; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #fff;
+    margin-top: 1%;
+}
+
+.gallery2 {
+    background-color: black;
+    text-align: center;
+}
+
+.collection2 img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease; 
+    padding: 14px;
+}
+
+.collection2 img:hover {
+    transform: scale(1.1);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .introduction-pic {
+        height: 200vh;
     }
 
-        .collection2 img:hover {
-            transform: scale(1.1);
-        }
+    #sub {
+        font-size: 20px;
+        margin-top: 5%;
+    }
 
-                /* Media Query for screen size 768px */
-                @media only screen and (max-width: 768px) {
-                    .introduction-pic {
-                        height: 200vh;
-                        /* Adjust height for smaller screens */
-                    }
-        
-                    #sub {
-                        font-size: 200%;
-                        /* Adjust font size for smaller screens */
-                        margin-top: 5%;
-                        /* Adjust margin for smaller screens */
-                    }
-        
-                    #p {
-                        font-size: 120%;
-                        /* Adjust font size for smaller screens */
-                        margin-top: 5%;
-                        /* Adjust margin for smaller screens */
-                    }
-        
-                    .parks {
-                        font-size: 150%;
-                        /* Adjust font size for smaller screens */
-                        margin-top: 3%;
-                        /* Adjust margin for smaller screens */
-                    }
-        
-                    .aboutpark {
-                        font-size: 120%;
-                        /* Adjust font size for smaller screens */
-                        margin-top: 2%;
-                        /* Adjust margin for smaller screens */
-                    }
-        
-                    .collection2 img {
-                        width: 90%;
-                        /* Make images fill the width of the container for smaller screens */
-                        height: auto;
-                        /* Maintain aspect ratio */
-                    }
-                }
-        
-                /* Media Query for screen size 1024px */
-                @media only screen and (min-width: 769px) and (max-width: 1024px) {
-                    .introduction-pic {
-                        height: 200vh;
-                        /* Adjust height for medium-sized screens */
-                    }
-        
-                    #sub {
-                        font-size: 250%;
-                        /* Adjust font size for medium-sized screens */
-                        margin-top: 6%;
-                        /* Adjust margin for medium-sized screens */
-                    }
-        
-                    #p {
-                        font-size: 130%;
-                        /* Adjust font size for medium-sized screens */
-                        margin-top: 6%;
-                        /* Adjust margin for medium-sized screens */
-                    }
-        
-                    .parks {
-                        font-size: 180%;
-                        /* Adjust font size for medium-sized screens */
-                        margin-top: 4%;
-                        /* Adjust margin for medium-sized screens */
-                    }
-        
-                    .aboutpark {
-                        font-size: 130%;
-                        /* Adjust font size for medium-sized screens */
-                        margin-top: 2%;
-                        /* Adjust margin for medium-sized screens */
-                    }
-        
-                    .collection2 img:hover {
-                        transform: scale(1.05);
-                        /* Slightly adjust the scale on hover for medium-sized screens */
-                    }
-                }
+    #p {
+        font-size: 16px;
+        margin-top: 5%;
+    }
+
+    .parks {
+        font-size: 24px;
+        margin-top: 3%;
+    }
+
+    .aboutpark {
+        font-size: 16px;
+        margin-top: 2%;
+    }
+
+    .collection2 img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #sub {
+        font-size: 24px;
+        margin-top: 6%;
+    }
+
+    #p {
+        font-size: 18px;
+        margin-top: 6%;
+    }
+
+    .parks {
+        font-size: 28px;
+        margin-top: 4%;
+    }
+
+    .aboutpark {
+        font-size: 18px;
+        margin-top: 2%;
+    }
+
+    .collection2 img:hover {
+        transform: scale(1.05);
+    }
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 767px) {
+    .map-container {
+        padding-bottom: 75%; 
+    }
+}
+
+
+
+
+
+
 
 
 
 
   /*leopard page*/
-                  .leopard-pic {
-                      background-position: center;
-                      background-size: cover;
-                      background-repeat: no-repeat;
-                      background-image: url(./images/leopardback3.webp);
-                      height: 100vh;
+.leopard-pic {
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-image: url(./images/leopardback3.webp);
+ height: 100vh;
                   }
         
-                  .gallery p {
-                      margin-top: 0;
-                      padding-top: 20px;
-                      color: #fff;
-                      font-size: 20px;
-                  }
+.gallery p {
+ margin-top: 0;
+ padding-top: 20px;
+ color: #fff;
+ font-size: 20px;
+ }
         
-                  .gallery h2 {
-                      margin-top: 0;
-                      padding-top: 20px;
-                      color: #fff;
-                      font-size: 40px;
-                  }
+  .gallery h2 {
+  margin-top: 0;
+  padding-top: 20px;
+  color: #fff;
+  font-size: 40px;
+  }
         
-                  /* Media query for screens with a maximum width of 1024px */
-                  @media only screen and (max-width: 1024px) {
-                      .leopard-pic {
-                          height: 150vh;
-                          /* Adjusted height for smaller screens */
-                      }
+                  
+ @media only screen and (max-width: 1024px) {
+ .leopard-pic {
+  height: 150vh;
+                         
+ }
         
-                      .gallery p {
-                          font-size: 18px;
-                          /* Adjusted font size for smaller screens */
-                      }
+ .gallery p {
+  font-size: 18px;
+                          
+ }
         
-                      .gallery h2 {
-                          font-size: 32px;
-                          /* Adjusted font size for smaller screens */
-                      }
-
+ .gallery h2 {
+  font-size: 32px;
+                       
+  }
+ }
         
-                      /* Add any additional styles for smaller screens within the .leopard-pic and .gallery sections */
-                  }
+ 
+  @media only screen and (max-width: 768px) {
+ .leopard-pic {
+  height: 150vh;
+                          
+   }
         
-
-                  /* Media query for screens with a maximum width of 768px */
-                  @media only screen and (max-width: 768px) {
-                      .leopard-pic {
-                          height: 150vh;
-                          /* Adjusted height for smaller screens */
-                      }
+  .gallery p {
+  font-size: 16px;
+                           
+  }
         
-                      .gallery p {
-                          font-size: 16px;
-                          /* Adjusted font size for smaller screens */
-                      }
-        
-                      .gallery h2 {
-                          font-size: 28px;
-                          /* Adjusted font size for smaller screens */
-                      }
-        
-                      /* Add any additional styles for smaller screens within the .leopard-pic and .gallery sections */
-                  }
+  .gallery h2 {
+  font-size: 28px;
+                         
+  }                   
+  }
                  
 
 
@@ -871,284 +828,189 @@ body, html {
 
 
 
-
-
-
-
-
     /*animals page*/
-                .animals-pic {
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-image: url(./images/animlsbackground.avif);
-                    height: 100vh;
-                }
-        
-                .poi {
-                    background-color: black;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 80vh;
-                }
-        
-                .poi-1 {
-                    display: grid;
-                    row-gap: 3.5rem;
-                    display: flex;
-                    flex-direction: row;
-                    width: 100%;
-                }
+ .animals-pic {
+     background: url(./images/animlsbackground.avif) center/cover no-repeat;
+     height: 100vh;
+ }
 
-        
-                .card {
-                    width: 400px;
-                    height: 500px;
-                    border-radius: 20px;
-                    overflow: hidden;
-                    position: relative;
-                    margin-left: 40px;
-                    margin: 10px;
-                    transition: 2s ease-in-out;
-                }
-        
-                .card:hover {
-                    transform: translateY(20px);
-                    filter: grayscale(80%);
-                }
-        
-                .card::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0%;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background: transparent;
-                    backdrop-filter: blur(20px);
-                    z-index: 2;
-                    transition: 2s all;
-                    opacity: 0;
-                }
-        
-                .card.hover:before {
-                    opacity: 1;
-                }
-        
-                .card img {
-                    margin-top: 50px;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 15px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-        
-                .card.card-body {
-                    position: relative;
-                    z-index: 3;
-                    color: #fff;
-                    opacity: 1;
-                    transform: translate(30px);
-                    transition: 2s all;
-                }
-        
-                .card-body {
-                    width: 100%;
-                    height: 100%;
-                    top: 100%;
-                    right: 0;
-                    position: absolute;
-                    color: rgb(255, 255, 255);
-                    padding: 30px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    transition: 2s all;
-                }
-        
-                .card:hover .card-body {
-                    top: 0;
-                }
-        
-                .card-title {
-                    text-transform: uppercase;
-                    font-size: 25px;
-                    font-weight: bold;
-                    margin: 10px;
-                    margin-left: 50px;
-                    margin-bottom: -10px;
-                    letter-spacing: 2px;
-                }
-        
-                .card-sub-title {
-                    text-transform: capitalize;
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: 25px;
-                    margin: 40px 0;
-                    margin-left: 50px;
-                }
-        
+ .pic {
+     background-color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 80vh;
+ }
 
-                
-                /* Media query for screens with a maximum width of 1024px */
+ .pic-1 {
+     display: grid;
+     row-gap: 3.5rem;
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+ }
 
-                @media only screen and (max-width: 1024px) {
-                    .card {
-                        width: 100%;
-                        /* Adjusted width for smaller screens */
-                        margin-left: 0;
-                        /* No margin on smaller screens */
-                        margin-right: 10px;
-                        /* Add a small margin on the right for spacing */
-                    }
-                }
-        
-                /* Media query for screens with a maximum width of 768px */
-                @media only screen and (max-width: 768px) {
-                    .card {
-                        width: 100%;
-                        /* Adjusted width for smaller screens */
-                        margin-left: 0;
-                        /* No margin on smaller screens */
-                        margin-right: 0;
-                        /* No margin on smaller screens */
-                    }
-        
-                    .card-title {
-                        font-size: 20px;
-                        /* Adjusted font size for smaller screens */
-                        margin-left: 10px;
-                        /* Adjusted margin for smaller screens */
-                    }
-        
-                    .card-sub-title {
-                        font-size: 14px;
-                        /* Adjusted font size for smaller screens */
-                        margin-left: 10px;
-                        /* Adjusted margin for smaller screens */
-                    }
-                }
+ .card {
+     width: 400px;
+     height: 500px;
+     border-radius: 20px;
+     overflow: hidden;
+     position: relative;
+     margin: 10px 0 10px 40px;
+     transition: 2s ease-in-out;
+ }
 
-        
+ .card:hover {
+     transform: translateY(20px);
+     filter: grayscale(80%);
+ }
 
-        
-/*yalabutton*/
-                .button {
-                    display: inline-block;
-                    padding: 15px 30px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    text-align: center;
-                    text-decoration: none;
-                    color: #fff;
-                    background-color: #3498db;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    position: relative;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                }
-        
-                .button:hover {
-                    background-color: #2980b9;
-                }
-        
-                .button:before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width: 0;
-                    height: 0;
-                    background-color: rgba(255, 255, 255, 0.3);
-                    border-radius: 100%;
-                    transform: translate(-50%, -50%);
-                    z-index: 1;
-                    transition: width 0.3s ease, height 0.3s ease;
-                }
-        
-                .button:hover:before {
-                    width: 120%;
-                    height: 300%;
-                }
-        
-                @keyframes shine {
-                    0% {
-                        transform: translateX(-50%) translateY(-50%) rotate(0deg);
-                    }
-        
-                    100% {
-                        transform: translateX(-50%) translateY(-50%) rotate(360deg);
-                    }
-                }
-        
-                .button:hover:before {
-                    animation: shine 1.5s infinite linear;
-                }
-    
+ .card::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: transparent;
+     backdrop-filter: blur(20px);
+     z-index: 2;
+     transition: 2s all;
+     opacity: 0;
+ }
+
+ .card.hover::before {
+     opacity: 1;
+ }
+
+ .card img {
+     margin-top: 50px;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 15px;
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* Mobile-first approach */
-    /* Default styles for smaller screens */
-    /* ... (your existing CSS) */
-    
-    /* Adjustments for tablets and larger screens */
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .bodycontent {
-    padding: 30px; /* Adjust padding */
+ @media (max-width: 767px) {
+    .pic {
+        height: auto;
     }
-    .topic {
-    font-size: 80px; /* Adjust font size for topic */
+
+    .pic-1 {
+        flex-direction: column;
+        align-items: center;
     }
-    .subtopic {
-    font-size: 24px; /* Adjust font size for subtopic */
-    padding: 0 40px; /* Adjust padding */
+
+    .card {
+        width: 70%;
+        max-width: 250px; 
+        margin: 10px auto;
     }
-    .image {
-    height: 50vh; /* Adjust image height */
+}
+
+@media (min-width: 768px) {
+    .pic {
+        height: 80vh;
     }
-    
-    nav ul {
-    margin: 5px auto; /* Center-align the nav */
+
+    .pic-1 {
+        flex-direction: row;
+        justify-content: center;
     }
-    nav ul li {
-    margin-right: 25px; /* Adjust margin */
+
+    .card {
+        width: 400px;
+        margin: 10px 0 10px 40px;
     }
-    
-    /* Adjust footer styles for larger screens */
-    .site-footer {
-    padding: 50px 0 25px; /* Adjust padding */
+}
+
+
+
+ .card.card-body {
+     position: relative;
+     z-index: 3;
+     color: #fff;
+     opacity: 1;
+     transform: translate(30px);
+     transition: 2s all;
+ }
+
+ .card-body {
+     width: 100%;
+     height: 100%;
+     top: 100%;
+     right: 0;
+     position: absolute;
+     color: #fff;
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     transition: 2s all;
+ }
+
+ .card:hover .card-body {
+     top: 0;
+ }
+
+ .card-title {
+     text-transform: uppercase;
+     font-size: 25px;
+     font-weight: bold;
+     margin: 10px 0 0 50px;
+     letter-spacing: 2px;
+ }
+
+ .card-sub-title {
+     text-transform: capitalize;
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 25px;
+     margin: 40px 0 0 50px;
+ }
+
+
+@media (max-width: 767px) {
+    .card-body {
+        width: 100%;
+        height: auto;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        margin: 0;
     }
-    
-    .footer-links {
-    margin-top: 25px; /* Add space between links */
+
+    .card-title {
+        font-size: 20px;
+        margin: 10px 0 0 20px;
     }
-    
-    .site-footer .row-socials a {
-    width: 50px; /* Adjust icon size */
-    height: 50px;
-    line-height: 50px;
-    font-size: 45px; /* Adjust font size for icons */
-    margin: 0 10px; /* Adjust spacing */
+
+    .card-sub-title {
+        font-size: 14px;
+        margin: 20px 0 0 20px;
     }
-         /* Intro Page 2 */
+}
+
+
+@media (min-width: 768px) {
+    .card-body {
+        padding: 30px;
+        margin: 0;
+    }
+
+    .card-title {
+        font-size: 25px;
+        margin: 10px 0 0 50px;
+    }
+
+    .card-sub-title {
+        font-size: 16px;
+        margin: 40px 0 0 50px;
+    }
+}

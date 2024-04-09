@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="newsletterstyle.css">
     <title>Wildlife In Sri Lanka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.4.0/css/zocial.min.css"
         integrity="sha512-D+88+j7wBsrfUyRLxvAi/ZYJ+2xffS/A9skvhx8Q8cxXv5rVrNX5BYm+GblI1POb23bjAygg2nXytDHtoGc9lQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="./images/logo.ico">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head> 
-<body>
+
+
+<body  x-data ="main">
     <header class="image">
         <nav class="nav-1s">
             <img src="images/logo.ico" class="logo">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Sri Lankan Wildlife Introduction</a></li>
+                <li><a href="introduction.html">Introduction to Sri Lankan Wildlife</a></li>
                 <li><a href="department.html">Department of Wildlife Conservation</a></li>
                 <li><a href="leopard.html">Sri Lankan Leopard</a></li>
                 <li>
@@ -27,26 +31,26 @@
                         <a href="wilpattu.html">Wilpattu National Park</a>
                     </section>
                 </li>
-                <li>
-                    <a href="animalsrilanka.html">Animals</a>
-                </li>
+                <li><a href="animalsrilanka.html">Animals</a></li>
+                <li><a href="register.html">Login</a></li>
             </ul>
-            <img  class="menubt" src="images/menubuttonnav.png" alt="">
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
         <section class="bodycontent">
-            <h1 class="topic">WILDLIFE IN SRI LANKA</h1>
-            <h4 class="subtopic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            <h1 class="topic" id="maintopic" x-text="maintopic" contenteditable="true"></h1>
+            <h4 class="subtopic" id="mainsub" x-text="mainsub"contenteditable="true"></h4>
             <a href="./department.html" class="hero-btn">visit us to know </a>
         </section>
     </header>
 
     <main>
+    </section>
         <section class="sub-intro">
                 <section class="subtopic">
-                    <h1 id="subtopic-title">Wild Serendipity: Discovering Sri Lanka's Enigmatic Wildlife</h1>
+                    <h1 id="subtopic" x-text="subtopic" contenteditable="true"></h1>
                 </section>
 
-                    <section class="intro-container"">
+                    <section class="intro-container">
                         <section class="intro-content">
                             <img src="images/introelepic.webp" alt="">
                         </section>
@@ -56,21 +60,15 @@
 
                     </section>
             <section>
-                 <p class="paragraph">An enchanting journey through Sri Lanka's rich biodiversity, from elusive leopards in Yala NationalPark to vibrant
-                                      birdlife in Sinharaja Rainforest. With tales of trumpeting elephants in Minneriya and the hypnotic dance of whalesoff
-                                      Mirissa's coast, this book offers vivid descriptions and stunning visuals, celebrating the remarkable wildlifethriving
-                                      in Sri Lanka's lush landscapes.</p>
+                 <p class="paragraph" id="hpara1" x-text="hpara1" contenteditable="true"></p>
              </section>
                 <section class="intro-content2">
                     <section class="intro-content2">
                             <img src="images/introcontent1.jpeg" alt="">
-                                    <p class="paragraph">Sri Lanka is a treasure trove for wildlife photography! Its diverse landscapes, national parks, and rich biodiversity
-                                                         offer incredible opportunities to capture stunning images of various animals in their natural habitats.</p>
+                                    <p class="paragraph" id="hpara2" x-text="hpara2" contenteditable="true"></p>
                     </section>
                 </section>
         </section>
-
-
     </main>
 
 
@@ -79,25 +77,21 @@
         <section class="container">
             <section class="row">
                 <section class="col-sm-12 col-md-6">
-                    <h6>About</h6>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed
-                        nisl varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                        ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit. Fusce eget arcu sed nisl
-                        varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                        ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit.</p>
+                    <h6 id="footertop"  x-text="footertop" contenteditable="true"></h6>
+                    <p class="text-justify"  id="footerpara" x-text="footerpara" contenteditable="true"></p>
                 </section>
                 <section>
                     <button class="btn" learn more>
                 </section>
                 <section class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
+                    <h6 id="footlink" x-text="footlink"></h6>
                     <ul class="footer-links">
                         <li><a href="department.html">About Us</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="loginpage.html">Login</a></li>
                         <li><a href="leopard.html">Leopard</a></li>
-                        <li><a href="index3.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="animalsrilanka.html">Animals</a></li>
-                        <li><a href="yalanationalpark.html">Yaala</a></li>
+                        <li><a href="yalanationalpark.html">Yala</a></li>
                         <li><a href="wilpattu.html">Wilpattu</a></li>
                     </ul>
                 </section>
@@ -112,7 +106,16 @@
                 </section>
             </section>
         </section>
+        <section class="newsletter">
+            <h2>Subscribe here</h2>
+            <form id="newsletterForm" action="#" method="post">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" id="subscribeBtn">Subscribe</button>
+            </form>
+            <p id="feedback" style="display: none;"></p>
+        </section>
     </footer>
+   <script src="index.js"></script>
+   <script src="newsletter.js"></script>
 </body>
-
 </html>

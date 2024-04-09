@@ -1,5 +1,4 @@
-body,
-html {
+body,html {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -16,12 +15,142 @@ p {
     margin: 40px;
 }
 
+/*navbar style*/
 
+/* Navbar Styles */
 .logo {
     position: absolute;
     width: 4%;
+    margin-left: 95%;
 }
 
+nav {
+    padding: 10px;
+    background-color: #33333378;
+}
+
+nav ul {
+    background-color: #33333378;
+    border-radius: 10px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 5px 120px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Submenu Styles */
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    z-index: 1;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+nav ul li .submenu a {
+    display: block;
+    padding: 8px 15px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav ul li .submenu a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-1s .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #333;
+        z-index: 1;
+        }
+            
+        .nav-1s .nav-links.show {
+        display: flex;
+        }
+            
+        .nav-1s .nav-links li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #555;
+        }
+            
+        .nav-1s .nav-links li a {
+        color: rgb(195, 189, 189);
+        text-decoration: none;
+        }
+
+        .logo{
+            margin-left: 90%;
+            width: 4%
+        }
+        }
+
+
+        .menu-toggle {
+            display: none; 
+            
+        }
+        
+     
+ @media only screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block; 
+     }
+        
+    .nav-links {
+     display: none; 
+     }
+        
+    .nav-links.active {
+     display: flex; 
+     flex-direction: column;
+     background-color: #010101;
+     position: absolute;
+     top: 60px; 
+     left: 0;
+     width: 100%;
+     z-index: 1;
+    }
+        
+    .nav-links li {
+     padding: 10px;
+     text-align: center;
+     border-bottom: 1px solid #000000;
+     }
+     }
+            
+       
 
 .yalatopic h1 {
     font-size: 100px;
@@ -102,11 +231,13 @@ p {
     margin: 0 10vh;
 }
 
-
-/* Media query for screens with a width of 768px */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .logo {
-        width: 8%;
+        width: 10%;
+    }
+
+    .yalatopic h1 {
+        font-size: 60px;
     }
 
     .topic {
@@ -115,177 +246,54 @@ p {
 
     .subtopic {
         font-size: 18px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 0;
-    }
-
-    .yalaimg {
-        margin-top: -20px;
+        padding: 0 20px;
+        margin: 0 50px;
     }
 
     .yalaimg h1 {
-        font-size: 40px;
+        font-size: 30px;
+        padding: 20px;
     }
 
     .yalaimg img {
-        height: 300px;
-        width: 300px;
+        height: 200px;
+        width: 200px;
         margin: 0 5vh;
     }
 }
 
-/* Media query for screens with a width of 768px */
-@media (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     .logo {
-        width: 8%;
+        width: 15%;
+    }
+
+    .yalatopic h1 {
+        font-size: 40px;
     }
 
     .topic {
-        font-size: 60px;
-    }
-
-    .subtopic {
-        font-size: 18px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 0;
-    }
-
-    .yalaimg {
-        margin-top: -20px;
-    }
-
-    .yalaimg h1 {
         font-size: 40px;
     }
 
-    .yalaimg img {
-        height: 300px;
-        width: 300px;
-        margin: 0 5vh;
+    .subtopic {
+        font-size: 16px;
+        padding: 0 10px;
+        margin: 0 30px;
     }
-}
 
-/* Media query for screens with a width between 769px and 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .backblur {
-        margin: 0 50vh;
+    .yalaimg h1 {
+        font-size: 24px;
+        padding: 15px;
     }
 
     .yalaimg img {
-        height: 350px;
-        width: 350px;
-        margin: 0 5vh;
+        height: 150px;
+        width: 150px;
+        margin: 0 3vh;
     }
 }
 
 
-
-
-
-/* Navbar Stylings */
-nav {
-    padding: 10px;
-    background-color: #33333378;
-}
-
-nav ul {
-    background-color: #33333378;
-    border-radius: 10px;
-    padding: 10px 0;
-    text-align: center;
-    margin: 5px 120px;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 8px 15px;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-}
-
-nav ul li a:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-
-/* Submenu Styles */
-nav ul li .submenu {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    z-index: 1;
-    border-radius: 6px;
-    margin-top: 8px;
-}
-
-nav ul li:hover .submenu {
-    display: block;
-}
-
-nav ul li .submenu a {
-    display: block;
-    padding: 8px 15px;
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-nav ul li .submenu a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-
-/* Footer */
-
-/* General Styling */
-.body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-section {
-    margin-bottom: 20px;
-}
-
-.quick-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-top: 10px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
 
 
 
@@ -386,7 +394,6 @@ nav ul li .submenu a:hover {
 
  /* Footer */
 
- /* General Styling */
  .site-footer {
      background-color: black;
      padding: 45px 0 20px;
@@ -394,7 +401,6 @@ nav ul li .submenu a:hover {
      line-height: 24px;
      color: #737373;
      text-align: center;
-     /* Center-aligning text */
  }
 
  .site-footer hr {
@@ -427,14 +433,12 @@ nav ul li .submenu a:hover {
      padding-left: 0;
      list-style: none;
      text-align: center;
-     /* Center-aligning text */
+
  }
 
  .footer-links li {
      display: inline-block;
-     /* Display links in a line */
      margin: 0 10px;
-     /* Adjust the space between links */
  }
 
  .footer-links a {

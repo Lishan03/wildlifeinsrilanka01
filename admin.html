@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Subscribed Users</h1>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <section class="center">
+        <a href="index.html">Back To Home</a>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const users = JSON.parse(localStorage.getItem("newsletterEmails")) || [];
+            const tableBody = document.getElementById("userTable").getElementsByTagName('tbody')[0];
+
+            users.forEach((email) => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).textContent = email;
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Remove";
+                removeButton.addEventListener("click", function () {
+                    const index = users.findIndex((e) => e === email);
+                    users.splice(index, 1);
+
+                    localStorage.setItem("newsletterEmails", JSON.stringify(users));
+
+                    tableBody.deleteRow(row.rowIndex);
+                });
+                row.insertCell(1).appendChild(removeButton);
+            });
+        });
+    </script>
+</body>
+</html>

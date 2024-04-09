@@ -5,192 +5,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="newsletterstyle.css">
     <title>Wildlife In Sri Lanka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.4.0/css/zocial.min.css"
         integrity="sha512-D+88+j7wBsrfUyRLxvAi/ZYJ+2xffS/A9skvhx8Q8cxXv5rVrNX5BYm+GblI1POb23bjAygg2nXytDHtoGc9lQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="./images/logo.ico">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    
 </head>
 
-<body>
+<body x-data="main">
     <header class="animals-pic">
         <nav class="nav-1s">
             <img src="images/logo.ico" class="logo">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Sri Lankan Wildlife Introduction</a></li>
+                <li><a href="introduction.html">Introduction to Sri Lankan Wildlife</a></li>
                 <li><a href="department.html">Department of Wildlife Conservation</a></li>
                 <li><a href="leopard.html">Sri Lankan Leopard</a></li>
                 <li>
-                    <a href="#">Parks</a>
+                    <a href="#more">Parks</a>
                     <section class="submenu">
                         <a href="yalanationalpark.html">Yala National Park</a>
                         <a href="wilpattu.html">Wilpattu National Park</a>
                     </section>
                 </li>
-                    <li>
-                        <a href="animalsrilanka.html">Animals</a>
-                    </li>
-                </li>
+                <li><a href="animalsrilanka.html">Animals</a></li>
+                <li><a href="register.html">Login</a></li>
             </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
         
         <section class="blur-content">
             <section class="backblur">
-                <h1>ANIMALS IN SRI LANKA</h1>
-                <p>Sri Lanka, a biodiverse island nation in South Asia, boasts a varied wildlife population thriving in its diverse
-                ecosystems. From the freely roaming Sri Lankan elephants in national parks to elusive leopards navigating dense jungles,
-                the country is a haven for wildlife enthusiasts. Tree-dwelling primates like langurs and macaques, alongside vibrant
-                bird species such as the Sri Lanka junglefowl, add to the island's ecological richness. The rivers and coastal waters
-                host diverse aquatic life, including saltwater crocodiles, sea turtles, and various fish species. Sri Lanka's commitment
-                to conservation, evident in its network of protected areas, plays a crucial role in safeguarding the captivating array
-                of animal life found throughout the nation.<p>
+                <h1 id="animaltopic1" x-text="animaltopic1" contenteditable="true"></h1>
+                <p id="animalpara1" x-text="animalpara1" contenteditable="true"><p>
             </section>
         </section>
     </header>
          
-<main>
-    <sectionb class="poi">
-        <section class="poi-1">
-                    
+
+    <main>
+        <section class="pic">
+            <section class="pic-1">
                 <section class="card">
                     <img src="images/Purple-faced_langur_animals.jpeg" alt="img" class="card-img">
-                    
-                        <section class="card-body">
-                            <h1 class="card-title">Purple faced langur</h1>
-                                <p class="card-sub-title">The purple-faced langur, also known as the purple-faced leaf monkey,ispecies of Old World monkey that is endemic to Sri Lanka. 
-                                                          The animal is a long-tailed arboreal species, identified by a mostly brown appearance,dark face and a very shy nature. </p>
-                        </section>
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals1" x-text="animals1" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animas1para" x-text="animas1para" contenteditable="true"></p>
+                    </section>
                 </section>
-                    
+    
                 <section class="card">
-                  
-                                <img class="black-and-white-image" src="images/srilankanelephantsanimals.jpeg" alt="img" class="card-img">
-                    
-                        <section class="card-body">
-                            <h1 class="card-title">Sri Lankan Elephant </h1>
-                                <p class="card-sub-title"> Sri Lankan Elephant | Species | WWF The Sri Lankan subspecies is the largest and also the darkest of the Asian elephants, with patches
-                                                           of depigmentation—areas with no skin color—on its ears, face, trunk and belly.</p>
-                        </section>
+                    <img class="black-and-white-image" src="images/srilankanelephantsanimals.jpeg" alt="img" class="card-img">
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals2" x-text="animals2" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animals2para" x-text="animals2para" contenteditable="true"></p>
+                    </section>
                 </section>
-                    
-                            <section class="card">
-                                <img src="images/solthbearanimal.jpeg" alt="img" class="card-img">
-                    
-                                <section class="card-body">
-                                    <h1 class="card-title">Solth Bear</h1>
-                                    <p class="card-sub-title">Sri Lankan Sloth Bear | Cinnamon Nature Trails Sri Lanka
-                                    Yala, Wilpattu, Wasgomuwa National Parks are the most popular places to watch Sloth Bears. Expert tree climbers in
-                                    search of berries.</p>
-                                </section>
-                            </section>
-                    
-                            <section class="card">
-                                <img src="images/Srilankanjunglefowlanimal.jpeg" alt="img" class="card-img">
-                    
-                                <section class="card-body">
-                                    <h1 class="card-title">Sri Lankan junglefowl</h1>
-                                    <p class="card-sub-title"> Female Sri Lanka junglefowl are drab in color and smaller than males. Females lack a fleshy comb and wattles, but have a
-                                    small crest at the base of the beak. The wattles and comb of the male Sri Lanka junglefowl are bright red. There is a
-                                    distinctive yellow patch in the center of his comb.</p>
-                                </section>
-                            </section>
-
+    
+                <section class="card">
+                    <img src="images/solthbearanimal.jpeg" alt="img" class="card-img">
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals3" x-text="animals3" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animals3para" x-text="animals3para" contenteditable="true"></p>
+                    </section>
+                </section>
+    
+                <section class="card">
+                    <img src="images/Srilankanjunglefowlanimal.jpeg" alt="img" class="card-img">
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals4" x-text="animals4" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animals4para" x-text="animals4para" contenteditable="true"></p>
+                    </section>
+                </section>
+            </section>
         </section>
-    </sectionb>
-
-
-                    <section class="poi">
-                        <section class="poi-1">
-                                        
-                                <section class="card">
-                                        <img src="images/Loris_tardigradus_animals.jpeg" alt="img" class="card-img">
-                                        
-                                    <section class="card-body">
-                                            <h1 class="card-title">Red slender loris</h1>
-                                                <p class="card-sub-title">The red slender loris is a small species of primate endemic to Sri Lanka. It is nocturnal and inhabits lowland
-                                                        rainforests, up to 700 m / 2,300 ft in altitude. </p>
-                                    </section>
-                                </section>
-                                        
-                                        <section class="card">
-                                            <img src="images/russell'sanimal.jpeg" alt="img" class="card-img">
-                                        
-                                                <section class="card-body">
-                                                        <h1 class="card-title">Russell's Viper</h1>
-                                                        <p class="card-sub-title">venomous snake in the family Viperidae native to the Indian subcontinent and one of the big four snakes in India. It was
-                                                        described in 1797 by George Shaw and Frederick Polydore Nodder, and named after Patrick Russell, who wrote about it in
-                                                        his 1796 work An account of Indian serpents, collected on the coast of Coromandel.</p>
-                                                </section>
-                                        </section>
-                                        
-                                            <section class="card">
-                                                        <img src="images/macaquesanimal.webp" alt="img" class="card-img">
-                                            
-                                                <section class="card-body">
-                                                    <h1 class="card-title">Macaques</h1>
-                                                        <p class="card-sub-title"> Macaques (Macaca spp.) are Old World monkeys, with the greatest geographical distribution of all non-human primates,
-                                                                                   across Asia, Southern Europe and North Africa. There are 22 species; the two most commonly used in research and testing
-                                                                                   are the cynomolgus macaque (Macaca fascicularis) and the rhesus macaque (Macaca mulatta).</p>
-                                                </section>
-                                            </section>
-                                            
-                                                <section class="card">
-                                                    <img src="images/sambaranimal.jpeg" alt="img" class="card-img">
-                                            
-                                                    <section class="card-body">
-                                                            <h1 class="card-title">Sambar deer</h1>
-                                                            <p class="card-sub-title"> The large deer native to the Indian subcontinent, South China and Southeast Asia that is listed as a vulnerable species on
-                                                            the IUCN Red List since 2008. Populations have declined substantially due to severe hunting, local insurgency, and
-                                                            industrial exploitation of habitat.</p>
-                                                    </section>
-                                                </section>         
-                     </section>
-                </section>
-
-        
-        
-
-
-</main>
-
-        <footer class="site-footer">
-            <section class="container">
-                <section class="row">
-                    <section class="col-sm-12 col-md-6">
-                        <h6>About</h6>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed
-                            nisl varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                            ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit. Fusce eget arcu sed nisl
-                            varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                            ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit.</p>
-                    </section>
-                    <section>
-                        <button class="btn" learn more>
-                    </section>
-                    <section class="col-xs-6 col-md-3">
-                        <h6>Quick Links</h6>
-                        <ul class="footer-links">
-                            <li><a href="department.html">About Us</a></li>
-                            <li><a href="contactus.html">Contact Us</a></li>
-                            <li><a href="leopard.html">Leopard</a></li>
-                            <li><a href="index3.html">Home</a></li>
-                            <li><a href="animalsrilanka.html">Animals</a></li>
-                            <li><a href="yalanationalpark.html">Yaala</a></li>
-                            <li><a href="wilpattu.html">Wilpattu</a></li>
-                        </ul>
+    
+        <section class="pic">
+            <section class="pic-1">
+                <section class="card">
+                    <img src="images/Loris_tardigradus_animals.jpeg" alt="img" class="card-img">
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals5" x-text="animals5" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animls5para" x-text="animls5para" contenteditable="true"></p>
                     </section>
                 </section>
-                <hr>
-            </section>
-            <section class="container">
-                <div class="row">
-                    <section class="col-md-8 col-sm-6 col-xs-12">
-                        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Wildlife Conservation
-                            Department.</p>
+    
+                <section class="card">
+                    <img src="images/russell'sanimal.jpeg" alt="img" class="card-img">
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals6" x-text="animals6" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animals6para" x-text="animals6para" contenteditable="true"></p>
                     </section>
+                </section>
+    
+                <section class="card">
+                    <img src="images/macaquesanimal.webp" alt="img" class="card-img">
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals7" x-text="animals7" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animals7para" x-text="animals7para" contenteditable="true"></p>
+                    </section>
+                </section>
+    
+                <section class="card">
+                    <img src="images/sambaranimal.jpeg" alt="img" class="card-img">
+                    <section class="card-body">
+                        <h1 class="card-title" id="animals8" x-text="animals8" contenteditable="true"></h1>
+                        <p class="card-sub-title" id="animals8para" x-text="animals8para" contenteditable="true"></p>
+                    </section>
+                </section>
             </section>
+        </section>
+    </main>
+    
+    
+    
+
+    <footer class="site-footer">
+        <section class="container">
+            <section class="row">
+                <section class="col-sm-12 col-md-6">
+                    <h6 id="footertop" x-text="footertop" contenteditable="true"></h6>
+                    <p class="text-justify" id="footerpara" x-text="footerpara" contenteditable="true"></p>
+                </section>
+                <section>
+                    <button class="btn" learn more>
+                </section>
+                <section class="col-xs-6 col-md-3">
+                    <h6 id="footlink" x-text="footlink"></h6>
+                    <ul class="footer-links">
+                        <li><a href="department.html">About Us</a></li>
+                        <li><a href="loginpage.html">Login</a></li>
+                        <li><a href="leopard.html">Leopard</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="animalsrilanka.html">Animals</a></li>
+                        <li><a href="yalanationalpark.html">Yaala</a></li>
+                        <li><a href="wilpattu.html">Wilpattu</a></li>
+                    </ul>
+                </section>
             </section>
-        </footer>
+    
+        </section>
+        <section class="container">
+            <section class="row">
+                <section class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Wildlife Conservation
+                        Department.</p>
+                </section>
+            </section>
+        </section>
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm" action="#" method="post">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" id="subscribeBtn">Subscribe</button>
+            </form>
+            <p id="feedback" style="display: none;"></p>
+        </section>
+    </footer>
+        <script src="animal.js"></script>
+        <script src="newsletter.js"></script>
     </body> 
 </html>

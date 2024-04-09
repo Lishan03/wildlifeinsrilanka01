@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="newsletterstyle.css">
     <title>Wildlife In Sri Lanka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.4.0/css/zocial.min.css"
         integrity="sha512-D+88+j7wBsrfUyRLxvAi/ZYJ+2xffS/A9skvhx8Q8cxXv5rVrNX5BYm+GblI1POb23bjAygg2nXytDHtoGc9lQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="./images/logo.ico">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body>
+<body x-data="main">
     <header class="leopard-pic">
         <nav class="nav-1s">
             <img src="images/logo.ico" class="logo">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Sri Lankan Wildlife Introduction</a></li>
+                <li><a href="introduction.html">Introduction to Sri Lankan Wildlife</a></li>
                 <li><a href="department.html">Department of Wildlife Conservation</a></li>
                 <li><a href="leopard.html">Sri Lankan Leopard</a></li>
                 <li>
@@ -28,35 +30,24 @@
                         <a href="wilpattu.html">Wilpattu National Park</a>
                     </section>
                 </li>
-                <li>
-                    <a href="animalsrilanka.html">Animals</a>
-                </li>
+                <li><a href="animalsrilanka.html">Animals</a></li>
+                <li><a href="register.html">Login</a></li>
             </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
         <section class="blur-content">
             <section class="backblur">
-                <h1>SRI LANKAN LEOPARD</h1>
-                <p>Known as the ‘Lord of the Jungle’, the Sri Lankan Leopard (Panthera parades kotiya) is one of the eight recognized
-                subspecies of Leopard and is indigenous to Sri Lanka. The Sri Lankan Leopard, the smallest of the ‘Big cats’ is still
-                the only large mammal predator in the country and relatively bigger in size than its relatives living elsewhere. It is
-                rusty yellow coloured with its characteristic dark spots and lithe elongated bodies. It is stocky in build, with a
-                shoulder height of about 45 to 80 centimeters with males weighing around 56 kg and females around 29 kg and lives up o
-                20 years. They are highly graceful and agile animals are predatory carnivores making them excellent hunters who pursue
-                different prey such as small mammals, birds, reptiles, wild boar, sambur and barking-deer of which the spotted deer
-                makes a larger part of its diet. They hunt mainly during the nights and are best observed during dawn and dusk and
-                sometimes during the daytime as well.</p>
+                <h1 id="leotopic1" x-text="leotopic1" contenteditable="true"></h1>
+                <p id="leopara1" x-text="leopara1" contenteditable="true"></p>
             </section>
         </section>
     </header>
     
     <main>
         <section class="gallery">
-            <h1>SRI LANKAN LEOPARD IN WILDLIFE</h1>
-            <h2> Yala National Park</h2>
-            <p>Yala National Park stands out as a major habitat for leopards in Sri Lanka. Known for its dense population of leopards,
-            the park consists of dense forests, grassy plains and lagoons, providing an ideal environment for these big cats to roam
-            freely. Visitors often embark on safari adventures here, hoping for a glimpse of these elusive creatures roaming through
-            the vegetation or resting on rocky outcrops.</p>
+            <h1 id="leotopic2" x-text="leotopic2" contenteditable="true"></h1>
+            <h2 id="leosubtopic1" x-text="leosubtopic1" contenteditable="true"></h2>
+            <p id="leopara2" x-text="leopara2" contenteditable="true"></p>
 
 
             <section class="collection2">
@@ -66,11 +57,8 @@
         </section>
 
             <section class="gallery">
-                <h2> Wilpattu National Park</h2>
-                <p>Wilpattu National Park, known for its unique landscape of lakes (or 'willis') and dense foliage, also serves as a
-                significant leopard area in Sri Lanka. The park's undulating terrain and abundant water sources provide an ideal habitat
-                for leopards to thrive, allowing visitors to see these magnificent animals in their natural element, hiding among the
-                trees or traversing the various terrains of the park.</p>
+                <h2 id="leosubtopic2" x-text="leosubtopic2" contenteditable="true"></h2>
+                <p id="leopara3" x-text="leopara3" contenteditable="true"></p>
             
                 <section class="collection2">
                     <img src="images/wilpattuwleopard2.jpeg" alt="" id="gal-img1">
@@ -79,11 +67,8 @@
             </section>
 
             <section class="gallery">
-            <h2> Horton Plains Park</h2>
-            <p>Horton Plains National Park, characterized by its scenic beauty and diverse ecosystem, is another notable place where
-            leopards roam. Although not as closely associated with leopards as Yala and Wilpattu, this park offers an opportunity to
-            encounter these elusive cats amidst hilly grasslands and cloud forests. The thrill of spotting a leopard against a misty
-            mountain backdrop adds an extra layer of excitement to the wildlife experience at Horton.</p>
+            <h2 id="leosubtopic3" x-text="leosubtopic3" contenteditable="true"></h2>
+            <p id="leopara4" x-text="leopara4" contenteditable="true"></p>
             
             <section class="collection2">
                 <img src="images/hortonleopard1.jpeg" alt="" id="gal-img1">
@@ -96,39 +81,45 @@
             <section class="container">
                 <section class="row">
                     <section class="col-sm-12 col-md-6">
-                        <h6>About</h6>
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed
-                            nisl varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                            ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit. Fusce eget arcu sed nisl
-                            varius scelerisque. Suspendisse rhoncus diam convallis orci feugiat vehicula. Nullam vitae
-                            ultrices nibh, a ultrices odio. Maecenas rutrum ut arcu ac suscipit.</p>
+                        <h6 id="footertop" x-text="footertop" contenteditable="true"></h6>
+                        <p class="text-justify" id="footerpara" x-text="footerpara" contenteditable="true"></p>
                     </section>
                     <section>
                         <button class="btn" learn more>
                     </section>
                     <section class="col-xs-6 col-md-3">
-                        <h6>Quick Links</h6>
+                        <h6 id="footlink" x-text="footlink"></h6>
                         <ul class="footer-links">
                             <li><a href="department.html">About Us</a></li>
-                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="loginpage.html">Login</a></li>
                             <li><a href="leopard.html">Leopard</a></li>
-                            <li><a href="index3.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="animalsrilanka.html">Animals</a></li>
                             <li><a href="yalanationalpark.html">Yaala</a></li>
                             <li><a href="wilpattu.html">Wilpattu</a></li>
                         </ul>
                     </section>
                 </section>
-                <hr>
+
             </section>
             <section class="container">
-                <div class="row">
+                <section class="row">
                     <section class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Wildlife Conservation
                             Department.</p>
                     </section>
+                </section>
             </section>
+            <section class="newsletter">
+                <h2>Subscribe to Our Newsletter</h2>
+                <form id="newsletterForm" action="#" method="post">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" id="subscribeBtn">Subscribe</button>
+                </form>
+                <p id="feedback" style="display: none;"></p>
             </section>
         </footer>
+        <script src="leopard.js"></script>
+        <script src="newsletter.js"></script>
 </body>
 </html>
